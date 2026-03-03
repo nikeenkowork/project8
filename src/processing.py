@@ -4,6 +4,8 @@ def filter_by_state(operations: list[dict], state: str = "EXECUTED") -> list[dic
         if "state" in operation and operation["state"] == state:
             result.append(operation)
     return result
+
+
 """
     Возвращает новый список словарей, у которых значение ключа 'state'
     соответствует переданному параметру state.
@@ -16,10 +18,10 @@ def filter_by_state(operations: list[dict], state: str = "EXECUTED") -> list[dic
 
 # Входные данные
 operations = [
-    {'id': 41428829, 'state': 'EXECUTED', 'date': '2019-07-03T18:35:29.512364'},
-    {'id': 939719570, 'state': 'EXECUTED', 'date': '2018-06-30T02:08:58.425572'},
-    {'id': 594226727, 'state': 'CANCELED', 'date': '2018-09-12T21:27:25.241689'},
-    {'id': 615064591, 'state': 'CANCELED', 'date': '2018-10-14T08:21:33.419441'}
+    {"id": 41428829, "state": "EXECUTED", "date": "2019-07-03T18:35:29.512364"},
+    {"id": 939719570, "state": "EXECUTED", "date": "2018-06-30T02:08:58.425572"},
+    {"id": 594226727, "state": "CANCELED", "date": "2018-09-12T21:27:25.241689"},
+    {"id": 615064591, "state": "CANCELED", "date": "2018-10-14T08:21:33.419441"},
 ]
 
 # Вызов функции
@@ -27,6 +29,7 @@ result = filter_by_state(operations)
 
 # Вывод
 print(result)
+
 
 def sort_by_date(operations: list[dict], reverse: bool = True) -> list[dict]:
     """
@@ -46,11 +49,13 @@ def sort_by_date(operations: list[dict], reverse: bool = True) -> list[dict]:
     # key=lambda op: op["date"] означает:    «Сортируй элементы по значению поля date»
 
     # Входные данные
+
+
 operations = [
-    {'id': 41428829, 'state': 'EXECUTED', 'date': '2019-07-03T18:35:29.512364'},
-    {'id': 939719570, 'state': 'EXECUTED', 'date': '2018-06-30T02:08:58.425572'},
-    {'id': 594226727, 'state': 'CANCELED', 'date': '2018-09-12T21:27:25.241689'},
-    {'id': 615064591, 'state': 'CANCELED', 'date': '2018-10-14T08:21:33.419441'}
+    {"id": 41428829, "state": "EXECUTED", "date": "2019-07-03T18:35:29.512364"},
+    {"id": 939719570, "state": "EXECUTED", "date": "2018-06-30T02:08:58.425572"},
+    {"id": 594226727, "state": "CANCELED", "date": "2018-09-12T21:27:25.241689"},
+    {"id": 615064591, "state": "CANCELED", "date": "2018-10-14T08:21:33.419441"},
 ]
 
 # Вызов функции
@@ -58,5 +63,3 @@ result = sort_by_date(operations)
 
 # Вывод
 print(result)
-
-
