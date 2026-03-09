@@ -3,7 +3,7 @@ def get_mask_card_number(card_number: int) -> str:
     Функция маскирует номер банковской карты.
     """
     bank_card = str(card_number)
-    return f"{s[:4]} {s[4:6]}** **** {s[-4:]}"
+    return f"{card_number[:4]} {s[4:6]}** **** {s[-4:]}"
 
 
 def get_mask_account(account_number: int) -> str:
